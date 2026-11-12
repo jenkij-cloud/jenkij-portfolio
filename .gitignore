@@ -26,6 +26,10 @@ yarn-error.log*
 .env*.local
 .env
 
+# temp files
+Grade.html
+Grade_files/
+
 # vercel
 .vercel
 

@@ -1,11 +1,16 @@
 export const personalInfo = {
   nameTh: "เจนกิจ สังสุณี",
   nameEn: "Jenkij Sungsunee",
+  studentId: "6720210035",
   role: "AI / Machine Learning Developer & Software Engineer",
   university: "มหาวิทยาลัยทักษิณ วิทยาเขตพัทลุง",
   faculty: "คณะวิทยาศาสตร์และนวัตกรรมดิจิทัล",
-  major: "สาขาวิทยาการคอมพิวเตอร์และสารสนเทศ ชั้นปีที่ 3",
-  gpax: "3.42",
+  major: "วท.บ. วิทยาการคอมพิวเตอร์และสารสนเทศ (วิชาเอก : วิทยาการดิจิทัล) ชั้นปีที่ 3",
+  minor: "ผู้ประกอบการเกษตรสมัยใหม่ (โท)",
+  gpax: "3.51",
+  totalCreditsPassed: 94,
+  totalCreditsEnrolled: 112,
+  cumulativeGP: 330,
   hometown: "จ.ตรัง / พัทลุง",
   email: "jenkij1159@gmail.com",
   phone: "094-628-6524",
@@ -35,7 +40,7 @@ export const personalInfo = {
   stats: [
     { value: "90+ ทีม", label: "คู่แข่งในการประกวด TSU Innovation Pitching League (คว้าอันดับ 1 สายแพทย์)" },
     { value: "Top 100", label: "ทีมตัวแทนผ่านเข้าชิงแชมป์ Startup Thailand League ระดับประเทศ" },
-    { value: "3.42", label: "เกรดเฉลี่ยสะสม (GPAX) สาขาวิทยาการคอมพิวเตอร์และสารสนเทศ" }
+    { value: "3.51", label: "เกรดเฉลี่ยสะสม (GPAX) สาขาวิทยาการคอมพิวเตอร์และสารสนเทศ" }
   ]
 };
 
@@ -150,6 +155,14 @@ export const awardsData = [
   },
   {
     year: "2569",
+    category: "ระดับมหาวิทยาลัย",
+    title: "ผ่านเข้ารอบ Campus League Final — TSU Innovation Pitching League 2026",
+    desc: "ทีม Jeed Jeed (จี๊ด จี๊ด) ผ่านการคัดเลือกรอบ Campus League เข้าสู่รอบ Final ของ TSU Innovation Pitching League 2026 ประเภท Public Health, Health & Medical Technology ด้วยผลงาน AI ตรวจหามะเร็งปอดจากภาพถ่าย CT-Scan ณ วิทยาเขตพัทลุง มหาวิทยาลัยทักษิณ",
+    organizer: "ฝ่ายกิจการนิสิต มหาวิทยาลัยทักษิณ (TSU Student Affairs)",
+    image: "/images/tsu-pitching-2026-campus.jpg"
+  },
+  {
+    year: "2569",
     category: "ระดับภูมิภาค",
     title: "รางวัลรองชนะเลิศอันดับ 2 Startup Thailand League 2026 ระดับภูมิภาค",
     desc: "ทีม Jeed Jeed ผลงาน AI ตรวจหามะเร็งปอดจากภาพถ่าย CT-Scan ได้รับเงินรางวัลสนับสนุน 5,000 บาท และได้สิทธิ์เป็นตัวแทนภูมิภาคเข้าสู่รอบชิงแชมป์ระดับประเทศ (18 พ.ค. 2569)",
@@ -181,3 +194,190 @@ export const awardsData = [
     image: "/images/outstanding-service-award-2568.jpg"
   }
 ];
+
+export const academicRecords = {
+  summary: {
+    studentId: "6720210035",
+    nameTh: "นายเจนกิจ สังสุณี",
+    nameEn: "Mr. Jenkij Sungsunee",
+    university: "มหาวิทยาลัยทักษิณ (TSU)",
+    campus: "วิทยาเขตพัทลุง",
+    faculty: "คณะวิทยาศาสตร์และนวัตกรรมดิจิทัล",
+    program: "วท.บ. วิทยาการคอมพิวเตอร์และสารสนเทศ (วิชาเอก : วิทยาการดิจิทัล)",
+    major: "วท.บ. วิทยาการคอมพิวเตอร์และสารสนเทศ (วิชาเอก : วิทยาการดิจิทัล)",
+    minor: "ผู้ประกอบการเกษตรสมัยใหม่ (โท)",
+    year: "ชั้นปีที่ 3",
+    status: "กำลังศึกษา (Active / ปกติ)",
+    gpax: "3.51",
+    totalCreditsPassed: 94,
+    totalCreditsEnrolled: 112,
+    cumulativeGP: 330,
+    advisor: "ผศ.ดร.สุวิมล จุงจิตร์ และ ผศ.สุดา เธียรมนตรี"
+  },
+  years: [
+    {
+      yearNumber: "ปีที่ 3",
+      academicYear: "2569",
+      summaryGpa: "3.86 (เทอม 1)",
+      semesters: [
+        {
+          id: "2569-2",
+          semester: "2/2569",
+          title: "ภาคเรียนที่ 2 / 2569",
+          status: "กำลังศึกษา (ยืนยันลงทะเบียนแล้ว)",
+          isCurrent: true,
+          creditsEnrolled: 18,
+          creditsPassed: 0,
+          cumulativePassed: 94,
+          cumulativeEnrolled: 112,
+          gpa: "-",
+          gpax: "3.51",
+          gp: "-",
+          cumulativeGP: 330,
+          courses: [
+            { code: "0015121", nameTh: "พลังคนรุ่นใหม่ใจสะอาด", nameEn: "POWER OF NEW GENERATIONS WITH PURE MIND", credits: 3, grade: "กำลังเรียน" },
+            { code: "0214322", nameTh: "การพัฒนาแอปพลิเคชันบนอุปกรณ์เคลื่อนที่", nameEn: "MOBILE APPLICATION DEVELOPMENT", credits: 3, grade: "กำลังเรียน" },
+            { code: "0214323", nameTh: "ชุดวิชาการพัฒนาระบบปัญญาประดิษฐ์ของสรรพสิ่ง", nameEn: "ARTIFICIAL INTELLIGENCE OF THINGS SYSTEMS DEVELOPMENT MODULE", credits: 5, grade: "กำลังเรียน" },
+            { code: "0214381", nameTh: "เทคโนโลยีความจริงเสมือนและความจริงแบบผสมผสาน", nameEn: "VIRTUAL REALITY AND MIXED REALITY TECHNOLOGY", credits: 3, grade: "กำลังเรียน" },
+            { code: "0214391", nameTh: "สัมมนา", nameEn: "SEMINAR", credits: 1, grade: "กำลังเรียน" },
+            { code: "0214392", nameTh: "โครงงานรวบยอด", nameEn: "CAPSTONE PROJECT", credits: 2, grade: "กำลังเรียน" },
+            { code: "0214393", nameTh: "เตรียมความพร้อมในการฝึกประสบการณ์วิชาชีพ", nameEn: "PRE-PROFESSIONAL EXPERIENCE PRACTICE", credits: 1, grade: "กำลังเรียน" }
+          ]
+        },
+        {
+          id: "2569-1",
+          semester: "1/2569",
+          title: "ภาคเรียนที่ 1 / 2569",
+          status: "ปกติ",
+          isCurrent: false,
+          creditsEnrolled: 19,
+          creditsPassed: 19,
+          cumulativePassed: 94,
+          cumulativeEnrolled: 94,
+          gpa: "3.86",
+          gpax: "3.51",
+          gp: 73.5,
+          cumulativeGP: 330,
+          courses: [
+            { code: "0004272", nameTh: "ผู้ประกอบการรุ่นใหม่สร้างรายได้จากฟาร์ม", nameEn: "PROFITABLE FARM BUSINESS FOR YOUNG ENTREPRENEURS", credits: 3, grade: "A" },
+            { code: "0214311", nameTh: "ชุดวิชาการตรวจสอบและการประกันคุณภาพซอฟต์แวร์", nameEn: "SOFTWARE TESTING AND QUALITY ASSURANCE MODULE", credits: 5, grade: "B+" },
+            { code: "0214321", nameTh: "ชุดวิชาการออกแบบและพัฒนาเว็บแอปพลิเคชัน", nameEn: "WEB APPLICATION DESIGN AND DEVELOPMENT MODULE", credits: 5, grade: "A" },
+            { code: "0214333", nameTh: "เทคโนโลยีพาณิชย์อิเล็กทรอนิกส์", nameEn: "ELECTRONIC COMMERCE TECHNOLOGY", credits: 3, grade: "A" },
+            { code: "0214372", nameTh: "การออกแบบสถาปัตยกรรมของอินเทอร์เน็ตของสรรพสิ่ง", nameEn: "INTERNET OF THINGS ARCHITECTURE DESIGN", credits: 3, grade: "A" }
+          ]
+        }
+      ]
+    },
+    {
+      yearNumber: "ปีที่ 2",
+      academicYear: "2568",
+      summaryGpa: "3.45 (เฉลี่ยปี 2)",
+      semesters: [
+        {
+          id: "2568-2",
+          semester: "2/2568",
+          title: "ภาคเรียนที่ 2 / 2568",
+          status: "ปกติ",
+          isCurrent: false,
+          creditsEnrolled: 20,
+          creditsPassed: 20,
+          cumulativePassed: 75,
+          cumulativeEnrolled: 75,
+          gpa: "3.67",
+          gpax: "3.42",
+          gp: 73.5,
+          cumulativeGP: 256.5,
+          courses: [
+            { code: "0214212", nameTh: "การจัดการโครงการซอฟต์แวร์", nameEn: "SOFTWARE PROJECT MANAGEMENT", credits: 2, grade: "B+" },
+            { code: "0214213", nameTh: "ชุดวิชากระบวนการออกแบบซอฟต์แวร์แนวใหม่", nameEn: "MODERN SOFTWARE DESIGN PROCESS MODULE", credits: 5, grade: "B+" },
+            { code: "0214221", nameTh: "ความมั่นคงปลอดภัยบนอินเทอร์เน็ต", nameEn: "INTERNET SECURITY", credits: 2, grade: "A" },
+            { code: "0214241", nameTh: "การสื่อสารในยุคดิจิทัล", nameEn: "COMMUNICATION IN DIGITAL ERA", credits: 2, grade: "A" },
+            { code: "0403394", nameTh: "ธุรกิจแมลงเศรษฐกิจ", nameEn: "ECONOMIC INSECTS BUSINESS", credits: 3, grade: "A" },
+            { code: "0403396", nameTh: "ธุรกิจเมล็ดพันธุ์", nameEn: "SEED BUSINESS", credits: 3, grade: "A" },
+            { code: "0403398", nameTh: "ธุรกิจการผลิตพืชในโรงเรือนอัจฉริยะ", nameEn: "SMART GREENHOUSE BUSINESS", credits: 3, grade: "B" }
+          ]
+        },
+        {
+          id: "2568-1",
+          semester: "1/2568",
+          title: "ภาคเรียนที่ 1 / 2568",
+          status: "ปกติ",
+          isCurrent: false,
+          creditsEnrolled: 18,
+          creditsPassed: 18,
+          cumulativePassed: 55,
+          cumulativeEnrolled: 55,
+          gpa: "3.22",
+          gpax: "3.32",
+          gp: 58.0,
+          cumulativeGP: 183.0,
+          courses: [
+            { code: "0214201", nameTh: "โครงสร้างข้อมูลและอัลกอริทึม", nameEn: "DATA STRUCTURES AND ALGORITHMS", credits: 2, grade: "B" },
+            { code: "0214202", nameTh: "อินเทอร์เน็ตและการประมวลผลบนคลาวด์", nameEn: "INTERNET AND CLOUD PROCESSING", credits: 2, grade: "A" },
+            { code: "0214203", nameTh: "การวิเคราะห์และออกแบบระบบตามประสบการณ์ผู้ใช้", nameEn: "SYSTEM ANALYSIS AND DESIGN BASED ON USER EXPERIENCE", credits: 3, grade: "B" },
+            { code: "0214204", nameTh: "ระบบฐานข้อมูล", nameEn: "DATABASE SYSTEMS", credits: 2, grade: "C+" },
+            { code: "0214211", nameTh: "การกำหนดความต้องการทางซอฟต์แวร์", nameEn: "SOFTWARE REQUIREMENT SPECIFICATION", credits: 3, grade: "B+" },
+            { code: "0403369", nameTh: "การผลิตไม้ผลนอกฤดู", nameEn: "OFF-SEASON IN TOPICAL FRUIT PRODUCTION", credits: 3, grade: "B" },
+            { code: "0403397", nameTh: "ธุรกิจเคมีภัณฑ์ทางการเกษตร", nameEn: "AGRICHEMICAL BUSINESS", credits: 3, grade: "B+" }
+          ]
+        }
+      ]
+    },
+    {
+      yearNumber: "ปีที่ 1",
+      academicYear: "2567",
+      summaryGpa: "3.38 (เฉลี่ยปี 1)",
+      semesters: [
+        {
+          id: "2567-2",
+          semester: "2/2567",
+          title: "ภาคเรียนที่ 2 / 2567",
+          status: "ปกติ",
+          isCurrent: false,
+          creditsEnrolled: 19,
+          creditsPassed: 19,
+          cumulativePassed: 37,
+          cumulativeEnrolled: 37,
+          gpa: "3.13",
+          gpax: "3.37",
+          gp: 59.5,
+          cumulativeGP: 125.0,
+          courses: [
+            { code: "0000111", nameTh: "อัตลักษณ์ทักษิณและความเป็นพลเมือง", nameEn: "TSU IDENTITY AND CITIZENSHIP", credits: 3, grade: "A" },
+            { code: "0000152", nameTh: "ภาษาอังกฤษเพื่อการสื่อสาร 2", nameEn: "ENGLISH FOR COMMUNICATION 2", credits: 3, grade: "C" },
+            { code: "0002116", nameTh: "รู้ชีวิตรักษ์ธรรมชาติ", nameEn: "KNOW LIFE SAVE NATURE", credits: 3, grade: "A" },
+            { code: "0002211", nameTh: "การคิดเชิงวิทยาศาสตร์", nameEn: "SCIENTIFIC THINKING", credits: 3, grade: "B+" },
+            { code: "0214102", nameTh: "นวัตกรรมดิจิทัลและการคิดเชิงออกแบบ", nameEn: "DIGITAL INNOVATION AND DESIGN THINKING", credits: 2, grade: "A" },
+            { code: "0214103", nameTh: "ความมั่นคงปลอดภัยไซเบอร์และกฎหมายดิจิทัล", nameEn: "CYBERSECURITY AND DIGITAL LAW", credits: 2, grade: "A" },
+            { code: "0214104", nameTh: "คณิตศาสตร์และสถิติ", nameEn: "MATHEMATICS AND STATISTICS", credits: 3, grade: "D" },
+            { code: "1000403", nameTh: "ภาษาอังกฤษสำหรับสำเร็จการศึกษา", nameEn: "ENGLISH EXIT EXAM", credits: 0, grade: "S" }
+          ]
+        },
+        {
+          id: "2567-1",
+          semester: "1/2567",
+          title: "ภาคเรียนที่ 1 / 2567",
+          status: "ปกติ",
+          isCurrent: false,
+          creditsEnrolled: 18,
+          creditsPassed: 18,
+          cumulativePassed: 18,
+          cumulativeEnrolled: 18,
+          gpa: "3.63",
+          gpax: "3.63",
+          gp: 65.5,
+          cumulativeGP: 65.5,
+          courses: [
+            { code: "0000151", nameTh: "ภาษาอังกฤษเพื่อการสื่อสาร 1", nameEn: "ENGLISH FOR COMMUNICATION 1", credits: 3, grade: "B" },
+            { code: "0000261", nameTh: "การเป็นนวัตกรสังคมและการพัฒนานวัตกรรมสังคม", nameEn: "INNOVATOR’S MINDSET AND SOCIAL INNOVATION DEVELOPMENT", credits: 3, grade: "A" },
+            { code: "0002121", nameTh: "วิทยาศาสตร์ถนอมชีวิต", nameEn: "SCIENCE CARES FOR LIFE", credits: 3, grade: "A" },
+            { code: "0002212", nameTh: "ทันโลกวิทยาศาสตร์", nameEn: "SCIENCE ALERT", credits: 3, grade: "A" },
+            { code: "0214101", nameTh: "แนวคิดการเขียนโปรแกรม", nameEn: "PROGRAMMING CONCEPT", credits: 2, grade: "B" },
+            { code: "0216101", nameTh: "วิทยาศาสตร์พื้นฐาน", nameEn: "FUNDAMENTAL SCIENCE", credits: 3, grade: "B+" },
+            { code: "0216191", nameTh: "ปฏิบัติการวิทยาศาสตร์พื้นฐาน", nameEn: "FUNDAMENTAL SCIENCE LABORATORY", credits: 1, grade: "A" }
+          ]
+        }
+      ]
+    }
+  ]
+};

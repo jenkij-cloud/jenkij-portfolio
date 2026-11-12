@@ -4,10 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { personalInfo, projects, skillsData, awardsData } from '../data/portfolioData';
 import ProjectModal from '../components/ProjectModal';
+import GradeModal from '../components/GradeModal';
 
 export default function HomePage() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [previewImage, setPreviewImage] = useState(null);
+  const [isGradeModalOpen, setIsGradeModalOpen] = useState(false);
 
   return (
     <div className="flex flex-col bg-white">
@@ -71,10 +73,25 @@ export default function HomePage() {
             {/* Right Column: GPAX Box & Contacts */}
             <div className="flex flex-col items-start md:items-end md:col-span-3">
               <div className="flex w-full flex-col md:w-auto md:min-w-[210px]">
-                {/* GPAX Box */}
-                <div className="w-full rounded-2xl border border-[#E5E5E5] bg-white p-5 transition-colors hover:border-[#CCCCCC] mb-6 shadow-sm">
-                  <div className="flex items-center gap-1.5 text-[13px] font-semibold text-[#525252] uppercase tracking-wider">
+                {/* GPAX Box (Clickable to view grades per year) */}
+                <div
+                  onClick={() => setIsGradeModalOpen(true)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setIsGradeModalOpen(true);
+                    }
+                  }}
+                  className="group w-full rounded-2xl border border-[#E5E5E5] bg-white p-5 transition-all hover:border-[#111111] hover:shadow-md mb-6 shadow-sm cursor-pointer text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111]"
+                  title="คลิกเพื่อดูผลการเรียนแยกตามแต่ละปี"
+                >
+                  <div className="flex items-center justify-between gap-1.5 text-[13px] font-semibold text-[#525252] uppercase tracking-wider">
                     <span>เกรดเฉลี่ยสะสม (GPAX)</span>
+                    <span className="text-xs text-[#111111] font-mono group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+                      ↗
+                    </span>
                   </div>
                   <div className="mt-2 flex items-baseline gap-1.5">
                     <span className="text-3xl font-extrabold tracking-tight text-[#111111] tabular-nums">
@@ -86,8 +103,17 @@ export default function HomePage() {
                   </div>
                   <div className="mt-2.5 flex items-center">
                     <p className="text-[12px] leading-relaxed text-[#525252]">
-                      ตัวแทนชิงแชมป์ Startup Thailand League 2026 ระดับประเทศ &amp; รองชนะเลิศ TSU Pitching
+                      ผ่าน {personalInfo.totalCreditsPassed} หน่วยกิต • มหาวิทยาลัยทักษิณ
                     </p>
+                  </div>
+                  <div className="mt-3.5 pt-3 border-t border-[#F0F0F0] flex items-center justify-between text-xs font-semibold text-[#111111]">
+                    <span className="flex items-center gap-1.5 text-[#525252] group-hover:text-[#111111] transition-colors">
+                      <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                      <span>คลิกดูเกรดในแต่ละปี</span>
+                    </span>
+                    <span className="rounded-full bg-[#111111] text-white px-2.5 py-0.5 text-[11px] group-hover:bg-neutral-800 transition-colors">
+                      ดูเกรด ↗
+                    </span>
                   </div>
                 </div>
 
@@ -415,6 +441,9 @@ export default function HomePage() {
           </div>
         </div>
       )}
+
+      {/* GRADE MODAL */}
+      <GradeModal isOpen={isGradeModalOpen} onClose={() => setIsGradeModalOpen(false)} />
     </div>
   );
 }

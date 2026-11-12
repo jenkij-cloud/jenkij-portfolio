@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Jenkij Sungsunee (เจนกิจ สังสุณี) • AI / Machine Learning Developer & Software Engineer',
-  description: 'Portfolio of Jenkij Sungsunee, Computer Science student at Thaksin University (GPAX 3.42). Specializing in Deep Learning, Medical Imaging AI, and Modern Web Applications.',
+  description: 'Portfolio of Jenkij Sungsunee, Computer Science student at Thaksin University (GPAX 3.51). Specializing in Deep Learning, Medical Imaging AI, and Modern Web Applications.',
   keywords: [
     'Jenkij Sungsunee',
     'เจนกิจ สังสุณี',
@@ -20,7 +20,7 @@ export const metadata = {
   authors: [{ name: 'Jenkij Sungsunee' }],
   openGraph: {
     title: 'Jenkij Sungsunee — AI Developer & Software Engineer',
-    description: 'Computer Science student at Thaksin University (GPAX 3.42). Runner-up in TSU Pitching League and National Finalist in Startup Thailand League 2026.',
+    description: 'Computer Science student at Thaksin University (GPAX 3.51). Runner-up in TSU Pitching League and National Finalist in Startup Thailand League 2026.',
     url: 'https://jenkij-cloud.github.io',
     siteName: 'Jenkij Sungsunee Portfolio',
     locale: 'th_TH',

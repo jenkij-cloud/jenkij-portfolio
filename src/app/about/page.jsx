@@ -1,8 +1,9 @@
 import { personalInfo, awardsData } from '../../data/portfolioData';
+import GradeViewer from '../../components/GradeViewer';
 
 export const metadata = {
   title: 'Jenkij Sungsunee • เกี่ยวกับ (About)',
-  description: 'ข้อมูลประวัติ วิสัยทัศน์ และเป้าหมายการทำงานของ เจนกิจ สังสุณี',
+  description: 'ข้อมูลประวัติ วิสัยทัศน์ และเป้าหมายการทำงานของ เจนกิจ สังสุณี (GPAX 3.51)',
 };
 
 export default function AboutPage() {
@@ -34,7 +35,7 @@ export default function AboutPage() {
             <span>•</span>
             <span>STARTUP THAILAND LEAGUE TOP 100</span>
             <span>•</span>
-            <span>GPAX 3.42 / 4.00</span>
+            <span>GPAX 3.51 / 4.00</span>
             <span>•</span>
             <span>NEXT.JS &amp; TAILWIND CSS</span>
             <span>•</span>
@@ -51,7 +52,7 @@ export default function AboutPage() {
             <span>•</span>
             <span>STARTUP THAILAND LEAGUE TOP 100</span>
             <span>•</span>
-            <span>GPAX 3.42 / 4.00</span>
+            <span>GPAX 3.51 / 4.00</span>
             <span>•</span>
             <span>NEXT.JS &amp; TAILWIND CSS</span>
             <span>•</span>
@@ -158,6 +159,26 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* GRADES SECTION */}
+      <section className="w-full bg-white px-6 py-[100px] md:py-[120px] border-b border-[#E5E5E5] text-[#111111]">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="pb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div>
+              <span className="text-[13px] font-semibold uppercase tracking-wider text-[#111111]">
+                Academic Transcript
+              </span>
+              <h2 className="mt-3 text-[32px] md:text-[40px] font-semibold tracking-tight text-[#111111] leading-tight">
+                ผลการเรียนรายภาคการศึกษา
+              </h2>
+              <p className="mt-3 text-[16px] leading-[1.6] text-[#525252] max-w-xl">
+                บันทึกรายวิชา หน่วยกิต และผลการเรียนทุกภาคการศึกษา สามารถกรองดูตามปีการศึกษาได้
+              </p>
+            </div>
+          </div>
+          <GradeViewer />
+        </div>
+      </section>
+
       {/* AWARDS SUMMARY IN ABOUT */}
       <section className="w-full bg-white px-6 py-[100px] md:py-[120px] text-[#111111]">
         <div className="max-w-[1200px] mx-auto">
@@ -169,18 +190,51 @@ export default function AboutPage() {
 
           <ol className="border-t border-[#E5E5E5]">
             {awardsData.map((award, idx) => (
-              <li key={idx} className="grid gap-2 border-b border-[#E5E5E5] py-8 md:grid-cols-12 md:gap-6">
-                <span className="font-mono text-sm font-semibold text-[#525252] md:col-span-2 tabular-nums">
-                  ปี {award.year}
-                </span>
-                <div className="md:col-span-10">
+              <li key={idx} className="grid gap-4 border-b border-[#E5E5E5] py-8 md:grid-cols-12 md:gap-6 items-start">
+                <div className="md:col-span-2 flex flex-col gap-1">
+                  <span className="font-mono text-sm font-semibold text-[#525252] tabular-nums">
+                    ปี {award.year}
+                  </span>
+                  {award.category && (
+                    <span className="inline-block rounded-full border border-[#E5E5E5] bg-[#FAFAFA] px-2.5 py-0.5 text-[11px] font-medium text-[#525252] w-fit">
+                      {award.category}
+                    </span>
+                  )}
+                </div>
+                <div className={award.image ? "md:col-span-7" : "md:col-span-10"}>
                   <p className="text-lg font-semibold text-[#111111] leading-snug">
                     {award.title}
                   </p>
                   <p className="mt-2 text-sm leading-[1.6] text-[#525252]">
                     {award.desc}
                   </p>
+                  {award.organizer && (
+                    <p className="mt-2 text-xs text-[#737373]">
+                      {award.organizer}
+                    </p>
+                  )}
                 </div>
+                {award.image && (
+                  <div className="md:col-span-3">
+                    <a
+                      href={award.image}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative block overflow-hidden rounded-xl border border-[#E5E5E5] bg-[#F5F5F5] aspect-[4/3] shadow-sm"
+                      title={`คลิกเพื่อดูภาพขนาดเต็ม: ${award.title}`}
+                    >
+                      <img
+                        src={award.image}
+                        alt={award.title}
+                        loading="lazy"
+                        className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-medium">
+                        ดูรูปภาพ ↗
+                      </div>
+                    </a>
+                  </div>
+                )}
               </li>
             ))}
           </ol>
