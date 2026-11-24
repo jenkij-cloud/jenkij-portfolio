@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { personalInfo, awardsData } from '../../data/portfolioData';
 import GradeViewer from '../../components/GradeViewer';
 
@@ -86,15 +87,13 @@ export default function AboutPage() {
               </p>
 
               <div className="mt-8 flex gap-3">
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/resume"
                   className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-5 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-neutral-800"
                 >
-                  <span>ดาวน์โหลดเรซูเม่ (PDF)</span>
+                  <span>เปิดดูและดาวน์โหลดเรซูเม่ (PDF)</span>
                   <span>↓</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

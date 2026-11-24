@@ -68,6 +68,15 @@ export default function Navbar() {
               เกี่ยวกับ
             </Link>
           </li>
+          <li>
+            <Link 
+              href="/resume" 
+              className="inline-flex items-center gap-1.5 whitespace-nowrap transition-colors hover:text-[#111111] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded px-2 py-0.5 font-semibold text-[#111111] bg-slate-100 hover:bg-slate-200 border border-slate-200"
+            >
+              <span>เรซูเม่</span>
+              <span className="text-[10px] bg-blue-600 text-white font-bold px-1.5 py-0.2 rounded-full">PDF</span>
+            </Link>
+          </li>
         </ul>
 
         {/* Action Buttons */}
@@ -160,6 +169,16 @@ export default function Navbar() {
                 className="block py-1 hover:text-[#525252]"
               >
                 เกี่ยวกับ
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/resume" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-between py-1 font-semibold text-blue-600 hover:text-blue-700"
+              >
+                <span>เรซูเม่ (Internship Resume)</span>
+                <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-bold">PDF Ready</span>
               </Link>
             </li>
             <li className="pt-2 border-t border-[#E5E5E5]">

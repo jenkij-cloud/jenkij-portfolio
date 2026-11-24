@@ -46,15 +46,13 @@ export default function HomePage() {
                   <span className="text-sm leading-none">↗</span>
                 </a>
 
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/resume"
                   className="inline-flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-white px-5 py-3 text-[13px] font-medium text-[#111111] transition-colors hover:bg-[#F5F5F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2"
                 >
-                  <span>ดาวน์โหลดเรซูเม่ (PDF)</span>
+                  <span>เรซูเม่สมัครฝึกงาน (PDF)</span>
                   <span className="text-[13px]">↓</span>
-                </a>
+                </Link>
               </div>
             </div>
 
